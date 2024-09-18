@@ -3,7 +3,13 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { CircularProgress, Typography, Paper, Box } from "@/components/ui";
+import {
+  CircularProgress,
+  Typography,
+  Paper,
+  Box,
+  Stack,
+} from "@/components/ui";
 import { API_URL } from "@/lib/constants";
 
 interface Character {
@@ -56,7 +62,7 @@ export default function CharacterDetails() {
           <Typography variant="h4" textAlign="center">
             {character.name}
           </Typography>
-          <Box sx={{ m: 2 }}>
+          <Stack alignItems="center" sx={{ my: 2 }}>
             <Image
               src={character.image}
               alt={character.name}
@@ -64,7 +70,7 @@ export default function CharacterDetails() {
               height={200}
               priority
             />
-          </Box>
+          </Stack>
           <Typography textAlign="center">Status: {character.status}</Typography>
           <Typography textAlign="center">
             Species: {character.species}
