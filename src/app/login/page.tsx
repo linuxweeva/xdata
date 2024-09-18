@@ -30,6 +30,7 @@ export default function Login() {
         margin="normal"
         type="email"
         name="email"
+        required
       />
       <Input
         label="Password"
@@ -38,6 +39,7 @@ export default function Login() {
         margin="normal"
         type="password"
         name="password"
+        required
       />
       <Button variant="contained" size="large" fullWidth type="submit">
         Login
